@@ -278,7 +278,7 @@ def calculate_plane_histogram(plane, doseplane, dosegridpoints, maxdose, dd,
     # and boolean xor to remove holes
     for i, contour in enumerate(contours):
         m = get_contour_mask(dd, id, dosegridpoints, contour)
-        grid = np.logical_xor(m.astype(np.uint8), grid).astype(np.bool)
+        grid = np.logical_xor(m.astype(np.uint8), grid).astype(np.bool_)
 
     hist, vol = calculate_contour_dvh(grid, doseplane, maxdose, dd, id,
                                       structure)
@@ -294,7 +294,7 @@ def get_contour_mask(dd, id, dosegridpoints, contour):
     # def inpolygon(polygon, xp, yp):
     #     return np.array(
     #         [Point(x, y).intersects(polygon) for x, y in zip(xp, yp)],
-    #         dtype=np.bool)
+    #         dtype=np.bool_)
 
     # p = Polygon(contour)
     # x, y = np.meshgrid(np.array(dd['lut'][0]), np.array(dd['lut'][1]))

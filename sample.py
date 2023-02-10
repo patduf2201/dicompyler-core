@@ -1,0 +1,18 @@
+from dicompylercore import dicomparser, dvh, dvhcalc
+absdvh = dvhcalc.get_dvh("../data/export_short/RS.dcm", "../data/export_short/RD.dcm", 17)
+absdvh.describe()
+dp = dicomparser.DicomParser("../data/export_short/RS.dcm")
+structures = dp.GetStructures()
+dvhrel = absdvh.relative_dose(6400)
+dvhrel.describe()
+import jsons
+str = jsons.dumps(absdvh.__dict__)
+f = open("../data/absdvh.json", "w")
+f.write(str)
+f.close()
+f = open("../data/absdvh.json", "r")
+str = f.read()
+f.close()
+readdvh = jsons.loads(str, dvh.DVH)
+readdvh.describe()
+quit()

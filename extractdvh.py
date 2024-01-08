@@ -9,7 +9,7 @@ def extract(basedir, targetdir):
     infos = []
     for structure in structures.values():
         if (structure['type']!='MARKER') and (structure['type']!='CONTROL'):
-            infos.append({ "id": structure['id'], "name": structure['name'], "type": structure['type'], "empty": structure['empty']})
+            infos.append({ "id": structure['id'], "name": structure['name'], "type": structure['type']})
     str = jsons.dumps(infos)
     f = open(targetdir + "/structures.json", "w")
     f.write(str)

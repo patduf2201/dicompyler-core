@@ -14,13 +14,13 @@ def anonDate(dt):
     return datetime.strftime(anonDate, '%Y%m%d')
 
 
-#workDir = 'c:/workspace/trumpet/data/hnc'
-workDir = '/var/data/hnc'
+workDir = 'c:/workspace/trumpet/data/hnc'
+#workDir = '/var/data/hnc'
 fcsv = open(f'{workDir}/dvhs.csv', 'w', newline='')
-csvwriter = csv.DictWriter(fcsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'nbStructures', 'structures', 'dirDvhs'])
+csvwriter = csv.DictWriter(fcsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'nbStructures', 'structures', 'dirDvhs'])
 csvwriter.writeheader()
 fanoncsv = open(f'{workDir}anon/dvhs.csv', 'w', newline='')
-anoncsvwriter = csv.DictWriter(fanoncsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'nbStructures', 'structures', 'dirDvhs'])
+anoncsvwriter = csv.DictWriter(fanoncsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'nbStructures', 'structures', 'dirDvhs'])
 anoncsvwriter.writeheader()
 auth = HTTPBasicAuth('orthanc', 'orthanc')
 url = "http://si-s-serv1041.st.chulg:8042/studies"
@@ -30,10 +30,10 @@ try:
     studies = resp.json()
     nbStudies = len(studies)
     iStudy = 1
-    for studyName in studies:
-        url = f'http://si-s-serv1041.st.chulg:8042/studies/{studyName}'
-#    studyName='a72788d1-8d232fd2-74c151ca-80962ab0-9752d282'
-#    for x in range(1):
+#    for studyName in studies:
+#        url = f'http://si-s-serv1041.st.chulg:8042/studies/{studyName}'
+    studyName='0b33e2ff-ae5ebd1b-5a2f9e66-61225e3f-67beb356'
+    for x in range(1):
         url = f'http://si-s-serv1041.st.chulg:8042/studies/{studyName}'
         resp = requests.get(url, auth=auth)
         resp.raise_for_status()
@@ -41,6 +41,7 @@ try:
         urlRtStruct = None
         patientId = study['PatientMainDicomTags']['PatientID']
         studyDate = study['MainDicomTags']['StudyDate']
+        studyID = study['MainDicomTags']['StudyID']
         print(f'Processing patient {patientId}, study {studyName}. Study {iStudy} on {nbStudies} studies')
         iStudy = iStudy + 1
         anonStudyDate = anonDate(studyDate)
@@ -79,6 +80,7 @@ try:
                     patientDir = f'{workDir}/{patientId}/{studyName}/{nbRtDose}'
                     shaPatientId = 'CHUL' + hashlib.sha256(patientId.encode('utf-8')).hexdigest()
                     shaStudyName = 'CHUL' + hashlib.sha256(studyName.encode('utf-8')).hexdigest()
+                    shaStudyID = 'CHUL' + hashlib.sha256(studyID.encode('utf-8')).hexdigest()
                     targetDir = f'{workDir}anon/{shaPatientId}/{shaStudyName}/{nbRtDose}'
                     print(f"Extracting patient {patientId}, study {studyName}, nbRtDose {nbRtDose}.")
                     os.makedirs(patientDir)
@@ -94,9 +96,9 @@ try:
                     structures = extract(patientDir, targetDir)
                     structureList = [i["name"] for i in structures]
                     structureNames = "|".join(structureList)
-                    csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
+                    csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyID, 'studyName': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
                     fcsv.flush()
-                    anoncsvwriter.writerow({'numnat': patientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
+                    anoncsvwriter.writerow({'numnat': patientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': shaStudyID, 'studyName': shaStudyName,  'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
                     fanoncsv.flush()
                     urlRtDose=None
                     nbRtDose = nbRtDose + 1 
@@ -111,4 +113,3 @@ else:
 finally:
     fcsv.close()
     fanoncsv.close()
-

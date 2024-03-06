@@ -1,0 +1,881 @@
+Structure,Count,Synonym
+Brain,485
+Mandible,483
+Eye_R,478
+Eye_L,478
+BrainStem,478
+Parotid_R,470
+Parotid_L,458
+Esophagus,429
+OpticNerve_L,425
+OralCavity,423
+BrachialPlexus_R,422
+BrachialPlexus_L,421
+Chiasm,420
+ConstrMuscle,420
+Lens_L,419
+OpticNerve_R,419
+Lens_R,418
+Thyroid,414
+Pituitary,400
+Submandibular_R,399
+Submandibular_L,390
+SpinalCanal,383
+Cochlea_R,344
+Cochlea_L,343
+MassMuscle_L,319
+MassMuscle_R,318
+PterMuscle_R,300
+PterMuscle_L,300
+Larynx_Supraglottis,272
+Glottis,264
+SpinalCord,159
+Ear_L,88
+Ear_R,81
+Larynx,68
+PostNeck,40
+LacrymalGland_L,25
+Lips,25
+LacrymalGland_R,23
+PterMuscl_R,20,PterMuscle_R
+PterMuscl_L,20,PterMuscle_L
+Carotid_R,15
+Carotid_L,13
+Trous,12
+Lung_L,12
+Lung_R,12
+Bone,11
+Retropharyngealmusc,9,ConstrMuscle
+Oral Cavity,8
+Masseter_L,8
+Brainstem,8,BrainStem
+Lungs-PTV,7
+neck,7
+bone,6,Bone
+ext cord,6
+ParotidR-out,6,Parotid_R
+Pterygoid_L,6
+TMjoint_L,6
+ParotidL-out,6,Parotid_L
+Pterygoid_R,6
+TMjoint_R,6
+parot dr out,6,Parotid_R
+Heart,6
+parot g out,6,Parotid_G
+p1-ext,6
+Lacrymal_L,6,LacrymalGland_L
+Masseter_R,6
+Eye (Right),6,Eye_R
+Eye (Left),6,Eye_L
+Lacrymal_R,6,LacrymalGland_R
+parotidL-out,5,LacrymalGland_L
+parotidR-out,5,,LacrymalGland_R
+Hippocampus_R,5
+L3GTV1,5
+out ss max l,5
+thyroid,4
+L2GTV1,4
+out paro r,4,Parotid_R
+Optic Chiasm,4,Chiasm
+os,4,Bone
+Bolus,4
+Hippocampus_L,4
+Paro R out,4,Parotid_D
+SupraGlottis,3,Larynx_Supraglottis
+ParotidGland (Left),3,Parotid_L
+Paro L out,3,Parotid_L
+postneck,3
+PRV_SpinalCanal,3,SpinalCanal
+ParotidGland (Right),3,Parotid_R
+ConstrictorMuscle,3,ConstrMuscle
+Optic Nerve Right,3,OpticNerve_R
+out paro l,3,Parotid_L
+oralcavity-out,3,
+out parot R,3,Parotid_R
+L6GTV1,3
+Mandible recalage,3,Mandible
+ADP III droite,3
+Intestins,3
+SpinalCord+3mm,3,SpinalCord
+out parot l,3,Parotid_L
+Parotid_L-PTV,3,Parotid_L
+out parot g,3,Parotid_L
+SpinalCord recalage,3,SpinalCord
+Brain1,3,Brain
+Liver,3
+Chiasma,3,Chiasm
+Optic Nerve Left,3,OpticNerve_L
+MiddleEar_R,3
+OptcNerve_R,3,OpticNerve_R
+ADP III DR SEUIL 3,2
+TemporalLobe_R,2
+ooo,2
+ADP cerv D,2
+Parotid_L_je_ reve,2,Parotid_L
+Ring1,2
+ring 1cm,2
+Parotid_L (1),2,Parotid_L
+L10GTV1,2
+thyroide,2,Thyroid
+Mandible (1),2,Mandible
+Parotid_R_je reve,2,Parotid_R
+Eye_L_PRV,2,Eye_L
+ADP IIA G SEUIL 2,2
+density,2
+ADP IIb gauche,2
+BrainStem (1),2,BrainStem
+ADP IIA G SEUIL 60 POURCENTS,2
+Chiasm (1),2,Chiasm
+SpinalCord (1),2,SpinalCord
+Primitif,2
+LESION BASE DE LANGUE SEUIL 26 POURCENTS,2
+CTNn_R_7000,2
+TemporalLobe_L,2
+Retina_R,2
+ss max dr out,2
+Zref6,2
+Cochlea_L (1),2,Cochlea_L
+MassMuscle_2200,2,
+Ear_drum_L_Dmax 2400,2,Ear_L
+Eyes_L,2,Eye_L
+ADP IIA G_30%,2
+Eye_L (1),2,Eye_L
+OpticNerve_R (1),2,OpticNerve_R
+peau-3mm,2
+Brain (1),2,Brain
+Pituitary (1),2,Pituitary
+Parotid_R-PTV,2
+ADP III DR SEUIL 2,2
+Stomach,2
+Retina_L,2
+ADP III G SEUIL 40 POURCENTS,2
+ADP IIA D_60%,2
+out paro L,2,Parotid_L
+Neo,2
+Carotid_L mean10 Gy max 40 Gy,2
+ParotidGland_L,2,Parotid_L
+ADP IIB DR SEUIL 40 POURCENTS,2
+out paro R,2,Parotid_R
+out ss max g,2
+5778,2
+ParotidGland_R,2,Parotid_R
+ADP IIa gauches,2
+ADP III G,2
+MiddleEar max25 Gy,2
+tooth,2
+PterMuscle_5800,2,PterMuscle_R
+PharyngealConstrMuscl,2,ConstrMuscle
+Parotid_L_out_0.3,2,Parotid_L
+out parot r,2,Parotid_R
+Opti1,2,
+L8GTV1,2
+OralCavity-out,2,
+ADP NEROTIQUE IIAB G SEUIL 2.5,2
+ADP1,2
+MiddleEar_L,2,Ear_L
+SpinalCanal (1),2,SpinalCanal
+ADP CERVICALE G INF_30%,1
+FemoralHead_R,1
+ADP IIB DR SEUIL 2.2,1
+Adp IIa D_40%,1
+TMJoint_L,1
+Lens_Left,1
+Glottis_out,1,Glottis
+FOYER PAROTIDIEN DR SEUIL 3,1
+SubmandibulL-out,1
+bonem,1,Bone
+Masse cervicale gauche,1
+Nd6_60pct,1
+Tseuil30pct,1
+Ng4a_30pct,1
+ADP cerv droite,1
+5457_in,1
+thyroid out,1,Thyroid
+ADP cerv dte 2,1
+Lungs,1
+p1-p2_Test,1
+Kidney_R,1
+Tympan_L_max 15 Gy,1,Ear_L
+Eye_R+5mm,1
+BrainStem_auto,1,BrainStem
+Supraglottis-PTV_0.3,1,Larynx_Supraglottis
+T_basi_LING_G_Seuil40pct,1
+Brachial Plexus Right,1
+Ear_R max 20 Gy svp ?,1,Ear_R
+Couch Coreold,1
+Lens_L_1,1
+Adp V G_40%,1
+adp cerv G 5,1
+middleEar_R_max30 GY,1,Ear_R
+Submandibular_L-PTV,1,Submandibular_L
+NÃ©o basi-lingual D,1
+LESION PHARYNGEE SEUIL 30 POURCENTS,1
+ADP III DR SEUIL 2.5,1
+Glottis (1),1,Glottis
+ADP IIA DR SEUIL 3,1
+Voile 30%,1
+Parotid_R_out-0.3,1,Parotid_R
+Adp IIaD_30%,1
+PRV_Eyes_L,1,Eye_L
+masseter_L_22gy,1,Masseter_L
+NEO BASILINGUAL_40%,1
+CricopharyngealMuscle,1,ConstrMuscle
+Eye_L+3mm,1,Eye_L
+rimext,1
+ADP II A DR SEUIL 59 POURCENTS,1
+PlexusBraR-out,1
+bonelow,1,Bone
+ADP IIA D_50%,1
+Adp cervicales droites_30%,1
+ConstrMuscle_out-0.3,1,ConstrMuscle
+adp cerv G 2,1
+Ggl cerv D,1
+Adp cervicales G_30%,1
+N_paraph_g_seuil40pct,1
+parotid_R-PTV,1,Parotid_R
+Submandibular_L_out-0.3,1
+out parot dr,1,Parotid_R
+OpticNrv_PRV_R,1,OpticNerve
+Aire VI,1
+opt,1,OpticNerve
+ADP IIA DR SEUIL 2.5,1
+PterMuscle_2200,1,
+LESION OROPHAR SEUIL 40 POURCENTS,1
+Pterigoid_L_mean58,1
+Neoplasie oropharyngÃ©e D_20%,1
+CarotidArtery_L_max 20 Gy,1
+Eye Left,1,Eye_L
+ADP IIA G SEUIL 38 POURCENTS,1
+T_seuil20pct,1
+adp cerv G 4,1
+LESION HYPOPHAR_LAR SEUIL 40 POURCENTS,1
+ADP IIB G2_60%,1
+bonemed,1,Bone
+ADP IIAG_40%,1
+ADP parapharyngÃ©e droite,1
+ADP IIA G2_65%,1
+parotid_L-PTV5400,1,Parotid_L
+out parot d,1,Parotid_R
+ADP IB DR ASPECIF SEUIL 2,1
+ADP III DR SEUIL 1.2 ASPECIF,1
+Carotid_L_out,1
+Pharynx + ADP paraphx D,1
+ssmax g out,1
+Tgangl-tum_amyg gche_seuil40pct,1
+constrmuscle-PTV,1,ConstrMuscle
+bkp_SpinalCanal,1,SpinalCanal
+GGL G4 plus modere,1
+Canal+3mm,1,SpinalCanal
+ADP IIb D,1
+breast_R,1
+Adp cervicales gauches_40%,1
+Spleen,1
+tongue,1
+N?,1
+jjjj,1
+Lens Right,1
+Base langue gauche ?,1
+ADPs CERV DR SEUIL 2.5,1
+ADP III DR SEUIL 1.8 ASPECIF,1
+lesion linguale seuil 25 pourcent,1
+bkp_BrachialPlexus_L,1
+ADPs III G SEUIL 1.8 ASPECIF,1
+P50-P54,1
+pavillon max 40 GY,1
+7000,1
+Neo +ADP G,1
+Ggl III dte,1
+EyeBack_L,1,Eye_L
+ADP IIA DR SEUIL 50 POURCENTS,1
+LESION BASLINGUALE_40%,1
+ADP CERVICALE SUP D_40%,1
+NEO OROPHARYNGE G,1
+supraglottis,1,Larynx_Supraglottis
+N_D_a_42pct,1
+N_cerv_G_2_seuil40pct,1
+ADP IV G2_50%,1
+adp cerv G 6,1
+TemporalMuscle_L,1
+OralCavity-PTVs,1,
+Pterygoid_R_22 ?,1
+ctv-ext,1
+thyroide out,1,Thyroid
+ADP CERVICALES D_50%,1
+ADP CERVICALE G SUP_30%,1
+ADP IIA D_30%,1
+Ggl cerv G 2,1
+OralCavity (1),1,?
+Carotid_L dmean25 Gy ?,1,Carotid_L
+N_cou_d1_seuil45pct,1
+Primitif + ADP IIa gauche,1
+TMJoint_R,1
+Optim,1
+Tympan Max 30 Gy,1
+ADP9,1
+ADP II droites,1
+ADP IIB DR SEUIL 1_7,1
+7450X,1
+ROI5778,1
+RCTV_6600,1
+cavite buccale,1,OralCavity
+ADP CERVICALES G2_40%,1
+PlastieOeso,1
+Mandible_out-0.3,1,
+ear_R,1,Ear_R
+OpticNerve_L (1),1,OpticNerve_L
+PRVcord,1
+Vol2_seuil20pct,1
+ctv xw primi,1
+out_parotid_L,1
+Parotid R out,1
+N_cerv_G_1_seuil30pct,1
+renforts,1
+GTvn4_R,1
+ADP IIA DR SEUIL 2,1
+LESION NASOPHARYNX SEUIL 40 POURCENTS,1
+ADP IIB G SEUIL 1.6,1
+Scalp,1
+brrr,1
+Carotid_L mean 40 Gy,1
+ADP_R,1
+Moelle,1
+L36GTV1,1
+GGL G,1
+ConstructMuscle-out,1
+PharyngealConstrictorMuscles,1
+BrachialPlexus_L_out-0.3,1
+OralCavity_out-0.3,
+RetroPharyngealMusc,1
+FOYER RETROLARYNGE D_40%,1
+MiddleEar_L _max 20 Gy,1
+Ng1_seuil60pct,1
+Neoplasie nasopharyngÃ©e 40%,1
+BrainStem MAX 20GY,1
+Adp rÃ©tropharyngÃ©e G,1
+sousmax_R-PTV,1
+out paroti d,1
+zref06,1
+Ggl cerv D 4,1
+NEO BASILINGUAL_25%,1
+Oesophage-out,1
+L31GTV1,1
+laser-old,1
+ADP4,1
+ADP PARATRACH SUP DR SEUIL 40 POURCENTS,1
+p2-p3b,1
+Eye_R_auto,1
+CTvn_R_7000,1
+isodose45Gy,1
+ADP G 2,1
+aetef,1
+Vol1_seuil15pct,1
+out partot R,1
+L35GTV1,1
+ADP cerv droit3,1
+Test_GTV+0.5,1
+ADP3,1
+ADP CERVICALES D_45%,1
+ADP CERVICALES G_15%,1
+60Gy,1
+ADP III G SEUIL 1,1
+Brain_auto,1
+OpticNrv_PRV_L,1
+meningiome sphÃ©no D,1
+GGL G3,1
+Masseter_L_mean22,1
+ADP IIa gauche_60%,1
+Adp III G_70%,1
+ADPs CERV G SEUIL 2.5,1
+NEOPLASIE SINUS PIRIFORME_30%,1
+Glottis+Larynx-PTV,1
+densite1,1
+z1cm,1
+Ear-R,1
+Submandibular_L-PTVs,1
+Neo amygdale droit,1
+ADP10,1
+Masseter_L_mean 22,1
+Parotid L out,1
+GGl_R_PP en plus2,1
+Esophagus_old,1
+uuu,1
+Nd7_50pct,1
+L32GTV1,1
+45 Gy,1
+VI,1
+Tympan_R MAX 40 Gy SVP :),1
+parotid_R-PTV5400,1
+GGL sous-angulo-mandib gauche,1
+V3_seuil40pct,1
+roi5130b,1
+Hippo_R+5mm,1
+p6600-ext,1
+ADP III D,1
+BrachialPlexus_R (1),1
+ADP IV droites,1
+sup,1
+ArtÃ©fact,1
+P70-0.3,1
+rctv3+0.3,1
+ADP III DR SEUIL 35 POURCENTS,1
+nn,1
+Lips max 50 Gy ?,1
+ADP PARATRACH DR SUSPECTE SEUIL 40 POURCENTS,1
+carotid_L_4000max?,1
+paro_out_L,1
+SpinalCord+PRVmax 50 y,1
+TemporalMuscle_R,1
+Brain_CL,1
+Cartilage,1
+MassMuscle_L (1),1
+ADP PRETRACHEALE SEUIL 40 POURCENTS,1
+EXTERNE-0.3,1
+adp cerv G 3,1
+ADP IIa dte,1
+Oesophagus,1
+ADP CERVICALE GAUCHE MOY_35%,1
+ADP IV G_40%,1
+ADP SUSPECTE IA OU VI SEUIL 1.5,1
+ADP_ParaP_R,1
+Spinal Cord + 10,1
+N_IIAD_seuil40pct,1
+ADP8,1
+ADP IIA DR SEUIL 30 POURCENTS,1
+60-70,1
+hyoide max 30 Gy,1
+ADP IIA DR SEUIL 2_5,1
+ADP IIA G SEUIL 3,1
+Thyroid (1),1
+Carotid_R mean 40 Gy,1
+LacrymalGland _R,1
+DOS,1
+oral out,1
+Ng2_20pct,1
+Rectum,1
+ADP III DR SEUIL 1.6,1
+ParotideR-out,1
+Carotid_L_ 20 GY,1
+PreScalp,1
+ADP IIB DR SEUIL 73 POURCENTS,1
+ADP cervicales droites,1
+Masseter_R_mean22,1
+sub mand R out,1
+Ring_Hippo_L_5mm,1
+ADP IV G,1
+L9GTV1,1
+Ggl G 2,1
+ADP_L,1
+V4_seuil30pct,1
+sousmax_L-PTV,1
+out ss max d,1
+Nd3_60pct,1
+Submandibular_R_out_0.3,1
+N_cou_d2_seuil30pct,1
+LESION EPIGLOTTIQUE SEUIL 35 POURCENTS,1
+ADP IIA DR SEUIL 40 POURCENTS,1
+Constr_Muscle,1
+Nd8_50pct,1
+out parot L,1
+Adp III D_55%,1
+thooth_a epargner 20 GY max,1
+ADP IIB DR SEUIL 1.5,1
+submandibular_R,1
+N_1_seuil30pct,1
+ADP IIA III DR SEUIL 35 POURCENTS,1
+zref06bis,1
+PCM_sup,1
+Pacemaker,1
+nÃ©o + masse ggl cerv D,1
+L33GTV1,1
+p2-p3 new,1
+Pterygoid_L_mean 22,1
+L34GTV1,1
+Submandibular_ri,1
+vertebra,1
+Ptegygoid_L 22 g,1
+Masseter_R_22 G,1
+retropharyngealmusc,1
+ADP Ib D,1
+ADP7,1
+Parotide_L-PTV,1
+BrachialPlexus_R_out-0.3,1
+Ring1 1cm,1
+N2d_50pct,1
+Tympan_R_15 Gy max,1
+Carotid_R_max 30 Gy,1
+VOL3_seuil60pct,1
+Ggl cerv G,1
+ADP IIB G SEUIL 2.2,1
+paro L out,1
+p1-p2b,1
+ADP IIB G_40%,1
+ADP III-VIG_55%,1
+Neoplasie sinus piriforme D_30%,1
+L29GTV1,1
+MassMuscle_5800,1
+p54-p60,1
+Ring2 1cm,1
+Paro_out_R,1
+p4+3mm,1
+Volumes radiothÃ©rapie,1
+Ng2_seuil65pct,1
+ADP IIAG2_65%,1
+ADP CERVICALES G_20%,1
+Pterigoid_R_mean58,1
+P54-0.3,1
+ADPs CERVICALES DR SEUIL 3,1
+Eyebrow_R,1
+FemoralHead_L,1
+Paro_L-PTV,1
+RealSkin,1
+Ggl cerv D 3,1
+P54-P60,1
+Foramen Magnum Limit,1
+Adp IIa_20%,1
+Paro_R-PTV,1
+GgLL,1
+APD IIA_D2_60%,1
+P1-P2-P3,1
+Eyebrow_L,1
+ADP III g,1
+Lens_R (1),1
+BuccalCavity,1
+Base langue droite,1
+ADP IIA G SEUIL 75 POURCENTS,1
+Rrrr,1
+Over,1
+Hippo_L+5mm,1
+external-3mm,1
+ADP IIB DR SEUIL 2.5,1
+LESION BASILINGUALE SEUIL 26 POURCENTS,1
+psst,1
+Thyroid dmean 35 GY ?,1
+Parotid2_L,1
+Ear_R 30-40 Gy,1
+L28GTV1,1
+iso 2,1
+rrr,1
+CTvn_L_5400,1
+GTvp+1,1
+sinus piriforme gauche,1
+Masster_R,1
+Adp IIbG_60%,1
+PterMuscle_L (1),1
+ADP IIB DR NECROTIQUE SEUIL 2.5,1
+V1_seuil30pct,1
+submandibulL-out,1
+L23GTV1,1
+Eye Right,1
+Thyroide,1
+L30GTV1,1
+L11GTV1,1
+ADP5,1
+BracPlexus-R,1
+iso 3000,1
+L27GTV1,1
+Oro-phar_d_seul40pct,1
+N_D_c_70pct,1
+Ggl D,1
+Ggl V gauche 2 asp,1
+NEO EPIGLOTTE G_30%,1
+LASER,1
+ear_L,1
+exp5cm,1
+CarotidArtery_R_max 20 Gy,1
+ADP IIIG_70%,1
+Nd4_60pct,1
+ADP cerv gauche,1
+ADP V D_40%,1
+adp path (cfr PET?),1
+ADP IIAB G SEUIL 40 POURCENTS,1
+ggl2,1
+Ggl cerv G 3,1
+ConstructMuscl-out,1
+Brain-Brainstem,1
+GGL G5 plus modere,1
+Construct-out,1
+LESION GLOTTIQUE SEUIL 45 POURCENTS,1
+Bladder,1
+ADPs CERV DR SEUIL 4.58,1
+L22GTV1,1
+Parotide_R out,1
+N_cerv_D_seuil40pct,1
+ring moelle,1
+Ng3_45pct,1
+N_G_65pct,1
+Tympan_max 20 Gy,1
+V2_seuil40pct,1
+p6000-ext,1
+adp IIA g seuil 2.2,1
+Adp IIbD_50%,1
+ADP IV G3_70%,1
+cochlea_R,1
+Larynx-out,1
+oesophagus,1
+VTVn_L_7000,1
+Neoplasie amygdaloglosse_35%,1
+Ear_max 25 Gy,1
+Ggl cerv droit discret,1
+Geniohyodien_R,1
+LESION PHARYNGOLARYNGEE SEUIL 30 POURCENTS,1
+ADP IIB G SEUIL 40 POURCENTS,1
+laserold,1
+yyy,1
+Bolus (1),1
+Nd2_40pct,1
+air_CTV,1
+Trachea,1
+Lung (Right),1
+N_CERVG_3_seuil55pct,1
+P54-P66,1
+Adp IIa G_35%,1
+dent,1
+CVTn_R_7000,1
+Submandibular_R-PTV,1
+ADP IIB G_50%,1
+Ring_Hippo_R_5mm,1
+PterygoidMuscle,1
+CAE Dmean 25 Gy,1
+OralCavity < 25 Gy,1
+LESION RETROTRACHEALE SEUIL 40 POURCENTS,1
+paro_out_R,1
+Parotid_L_je reve,1
+LESION SINUS PIRIFORME DR SEUIL 20 POURCENTS,1
+Lens Left,1
+cou_D,1
+Carotid_L_20 GY,1
+iiii,1
+exp1cm,1
+Adp IIaG_25%,1
+N_seuil40pct,1
+Carotid_R_20 Gy,1
+middleEar_R_max 30 Gy,1
+Eye_L+5mm,1
+NEO SINUS PIRIFORME G_25%,1
+ref06,1
+Jejunum,1
+Submandibular_L (1),1
+P3-p4,1
+mandibul-out,1
+ff,1
+GGL cerv ant,1
+neo + adp rÃ©tro-ph D,1
+Tympan_max 20 GY,1
+GANGLION III G SEUIL 1.8,1
+Eye_R (1),1
+VTM2_60pct,1
+ADP IIIG_65%,1
+ADP IIA DR ASPEC SEUIL 1.5,1
+Lips_Dmean20Gy,1
+MassMuscle_R (1),1
+ADP IV G_60%,1
+z3cm,1
+EyeFront_L,1
+Ng3_seuil60pct,1
+ADP IIA G_60%,1
+eso out,1
+Larynx_Supraglottis (1),1
+ADP parapharynx droite,1
+GGL PARAPHARYNGE D_60%,1
+Lung (Left),1
+diverticule,1
+Ear_R max 25 GY ?,1
+Neoplasie epiglotte_25%,1
+MiddleEar_R_max 45Gy,1
+larynx-out,1
+VTM4_70pct,1
+N_paraPh_D_seuil0pct,1
+out ss max L,1
+ADP IIA G1_50%,1
+V5_seuil40pct,1
+dmean 25 Gy ?,1
+densitÃ© ok,1
+rim1,1
+Ggl V gauche asp,1
+llll,1
+Lens_LE,1
+ADP Ib gauche,1
+ADP IIA G SEUIL 61 POURCENT,1
+Temporal_L_mean22,1
+neo sinus piriforme D,1
+Air,1
+ADP cerv droit,1
+ADP RETROPHARYNGEE G SEUIL 3,1
+ADP CERVICALES G3_40%,1
+p2-p1,1
+p2+5mm,1
+roi4845,1
+P5400-3,1
+ADP III droites,1
+moche,1
+suproglottis,1
+EXT-3,1
+Brachial Plexus Left,1
+Bones,1
+Parotid_R (1),1
+PRV-Spinal,1
+Lips Dmean 20Gy,1
+ADPs IIB G SEUIL 1.3,1
+ANT,1
+ADP CERVICALE INF D_30%,1
+ADP2,1
+ADP IIA G SEUIL 37 POURCENTS,1
+Right,1
+oooo,1
+CTvn_L_6000,1
+bkp_BrachialPlexus_R,1
+Pterygoidien_L,1
+submandibulR-out,1
+LASER (2),1
+sub mand L out,1
+Nd40pct,1
+machin,1
+Artefact_Haut,1
+ADP cervicale droite,1
+mandiOut,1
+MassMuscle_L_out,1
+implants,1
+Repli A-E droit,1
+Lens_L (1),1
+N1g_70pct,1
+EyeFront_R,1
+ConstrMuscle (1),1
+ADP IIa droite_55%,1
+out ss max dr,1
+over-3mm,1
+roi6460,1
+roi4815,1
+Eye_L_auto,1
+Brain DMAX 30GY,1
+rim5,1
+protect,1
+Infiltrat sous-cut,1
+P1-P2 test,1
+rim1cm,1
+OralCavity_sup_max 30 ?,1,OralCavity
+VTM1_30pct,1
+larynx,1
+N2_seuil60pct,1
+Parotide_L-PTVs,1
+Cochlea_R (1),1
+PterMuscle_R (1),1
+ADP IIA droite,1
+p5400-ext,1
+p1-(p2+10),1
+ATM_R,1
+Carotid_R_out,1
+r,1
+Adp IIa droite,1
+density-peau,1
+Ng1_40pct,1
+RVR,1
+LESION ARYEPIGLOTTIQUE G SEUIL 40 POURCENTS,1
+Ring3 1cm,1
+LESION BASILINGUALE DR SEUIL 50 POURCENTS,1
+ssmaxL,1
+7490X,1
+ref 1.25,1
+ADP VI SEUIL 40 POURCENTS,1
+p1p-2,1
+Submandibular_R_out-0.3,1
+ISO 1,1
+c+3,1
+Pharyngealconstrictormuscles,1
+rim3cm,1
+HYPERM AMYGD DR SEUIL 3,1
+ADP CERVICALE D_20%,1
+P60-P70,1
+OpticPathway,1
+EyeBack_R,1
+Esophagus (1),1
+Neo amygdale_30%,1
+?,1
+Ggl cerv D 2,1
+ADP CERV G SEUIL 40 POURCENTS,1
+N_II_D_seuil30pct,1
+T_seuil25pct,1
+SpinalCanal MAX 40GY,1
+Ggl G,1
+Amygdale,1
+Geniohyoidien_L,1
+ADP IIB G,1
+NEOPLASIE SINUS PIRIFORME + ADP CERVICALES G_20%,1
+Langue,1
+GGL gauche,1
+Ng4b_40pct,1
+L25GTV1,1
+LESION OROPHARYNGEE SEUIL 45 POURCENTS,1
+Pterygoidien_R,1
+submandebulL-out,1
+c2-c3,1
+Parotid_L_out-0.3,1
+6650,1
+ggl nucl douteux,1
+eso_ptv54,1
+ADENOPATHIES CERVICALES G_55%,1
+Cord1,1
+density3,1
+ADP IIa G,1
+p54-p6,1
+ADP IIB DR SEUIL 2_2,1
+out_parotid_R,1
+Parotide_L out,1
+Ggl cerv G 4,1
+PlexusBraL-out,1
+Recoupe moelle,1
+Thyroid-PTV_0.3,1
+N_cerv_D_seuil25pct,1
+adp cerv G 1,1
+NOK_PTV_ORL_7000,1
+Submandibular_L_out_0.3,1
+N_D_b_65pct,1
+PCM_inf,1
+NEO AMYGDALE D + ADP CERVICALES_20%,1
+DensitÃ©,1
+P60-0.3,1
+V3_seuil60pct,1
+Brachialplexus,1
+Lips_mean<20Gy,1
+tete humerale,1
+N_IIIG_seuil50pct,1
+Neoplasie basilinguale G_35%,1
+p60-p70,1
+ADP CERVICALES G1_40%,1
+Cou_G,1
+LESION PHARYNGO-LARYNGEE + ADP IIIG_20%,1
+laser,1
+p1-p2+0.5,1
+ggl3,1
+PterMuscle_L_out,1
+ADP IIID_60%,1
+PRV_Brainstem,1
+Ear_L_max 30 GY,1
+Buccopharynx,1
+Brain_CL-BrainStem,1
+brachus PP,1
+LESION OROPHAR G SEUIL 40 POURCENTS,1
+roi4275,1
+ggl,1
+BrainStem+3mm,1
+LESION NASOPOHARYNGEE G + ADP CERVICALES G_18%,1
+Lacrymalgland_L,1
+GGL_R_PP env plus,1
+ADP III DR ASPEC SEUIL 2,1
+Nd1_20pct,1
+5700XX,1
+ref 6 1.38,1
+BrachialPlexus_L (1),1
+VTM3_70pct,1
+p7000-ext,1
+adp parapharyngÃ© G,1
+exetern-0.3,1
+Submandibular_R (1),1
+ADPs IIA DR SEUIL 2.5 ASPECIF,1
+Parotid_R_out_0.3,1,Parotid_R
+PRV_Optics,1
+ADP cerv dte,1
+GANGLION IIB DR ASPEC SEUIL 1.8,1
+LESION PARATRACHEALE SEUIL 20 POURCENTS,1
+OpticChiasm_PRV,1
+ADP Ib G,1
+OVER,1

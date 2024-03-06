@@ -8,6 +8,10 @@ import hashlib
 import logging
 from datetime import date, datetime
 
+def anonString(str):
+    prefixed = 'TRUMPETHNC$!' + str
+    return 'CHUL' + hashlib.sha1(prefixed.encode('ISO_8859_1')).hexdigest()
+
 def anonDate(dt):
     anonDate = datetime.strptime(dt, '%Y%m%d')
     anonDate = date(anonDate.year, anonDate.month, 1)
@@ -79,8 +83,8 @@ try:
                     anonDoseDate = anonDate(doseDate)
                     patientDir = f'{workDir}/{patientId}/{studyName}/{nbRtDose}'
                     #TODO: add study prefix for anonymization !!! check that still match !!!
-                    shaPatientId = 'CHUL' + hashlib.sha256(patientId.encode('utf-8')).hexdigest()
-                    shaStudyName = 'CHUL' + hashlib.sha256(studyName.encode('utf-8')).hexdigest()
+                    shaPatientId = 'CHUL' + hashlib.sha256(patientId.encode('ISO_8859_1')).hexdigest()
+                    shaStudyName = 'CHUL' + hashlib.sha256(studyName.encode('ISO_8859_1')).hexdigest()
                     shaStudyID = 'CHUL' + hashlib.sha256(studyID.encode('utf-8')).hexdigest()
                     targetDir = f'{workDir}anon/{shaPatientId}/{shaStudyName}/{nbRtDose}'
                     print(f"Extracting patient {patientId}, study {studyName}, nbRtDose {nbRtDose}.")

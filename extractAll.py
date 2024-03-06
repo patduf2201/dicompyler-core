@@ -17,8 +17,6 @@ def anonDate(dt):
     anonDate = date(anonDate.year, anonDate.month, 1)
     return datetime.strftime(anonDate, '%Y%m%d')
 
-<<<<<<< HEAD
-
 #workDir = 'c:/workspace/trumpet/data/hnc'
 workDir = '/var/data/hnc'
 processSynonyms('structures_dict.csv')
@@ -85,9 +83,9 @@ try:
                     anonDoseDate = anonDate(doseDate)
                     patientDir = f'{workDir}/{patientId}/{studyName}/{nbRtDose}'
                     #TODO: add study prefix for anonymization !!! check that still match !!!
-                    shaPatientId = 'CHUL' + hashlib.sha256(patientId.encode('ISO_8859_1')).hexdigest()
-                    shaStudyName = 'CHUL' + hashlib.sha256(studyName.encode('ISO_8859_1')).hexdigest()
-                    shaStudyID = 'CHUL' + hashlib.sha256(studyID.encode('utf-8')).hexdigest()
+                    shaPatientId = anonString(patientId)
+                    shaStudyName = anonString(studyName)
+                    shaStudyID = anonString(studyID)
                     targetDir = f'{workDir}anon/{shaPatientId}/{shaStudyName}/{nbRtDose}'
                     print(f"Extracting patient {patientId}, study {studyName}, nbRtDose {nbRtDose}.")
                     os.makedirs(patientDir)
@@ -105,7 +103,7 @@ try:
                     structureNames = "|".join(structureList)
                     csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyID, 'studyName': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
                     fcsv.flush()
-                    anoncsvwriter.writerow({'numnat': patientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': shaStudyID, 'studyName': shaStudyName,  'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
+                    anoncsvwriter.writerow({'numnat': shaPatientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': shaStudyID, 'studyName': shaStudyName,  'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
                     fanoncsv.flush()
                     urlRtDose=None
                     nbRtDose = nbRtDose + 1 

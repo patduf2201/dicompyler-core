@@ -2,7 +2,7 @@ import os
 import requests
 from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
-from extractdvh import extract, processSynonyms
+from extractdvh import extract, processSynonyms, getStructureSynonym
 import csv
 import hashlib
 import logging
@@ -82,7 +82,6 @@ try:
                     doseDate = tags['SeriesDate']
                     anonDoseDate = anonDate(doseDate)
                     patientDir = f'{workDir}/{patientId}/{studyName}/{nbRtDose}'
-                    #TODO: add study prefix for anonymization !!! check that still match !!!
                     shaPatientId = anonString(patientId)
                     shaStudyName = anonString(studyName)
                     shaStudyID = anonString(studyID)
@@ -99,7 +98,7 @@ try:
                     with open(f'{patientDir}/rtdose.dcm', 'wb') as f:
                         f.write(resp.content)
                     structures = extract(patientDir, targetDir)
-                    structureList = [i["name"] for i in structures]
+                    structureList = [getStructureSynonym(i["name"]) for i in structures]
                     structureNames = "|".join(structureList)
                     csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyID, 'studyName': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
                     fcsv.flush()

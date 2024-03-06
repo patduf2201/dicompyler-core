@@ -11,6 +11,11 @@ def processSynonyms(sfile: string):
             if len(row)>2 and row[2]!='':
                 synonyms[row[0]]=row[2]
 
+def getStructureSynonym(name: string):
+    if (name in synonyms.keys()):
+        return synonyms[name]
+    return name
+
 def extract(basedir, targetdir):
     rsfile = basedir + "/rtstruct.dcm"
     rdfile = basedir + "/rtdose.dcm"
@@ -34,9 +39,7 @@ def extract(basedir, targetdir):
                   }
         str = jsons.dumps(dvhinfo)
         #TODO: use structure name (or synonym) instead of id.
-        name = info['name']
-        if (name in synonyms.keys()):
-            name = synonyms[name]
+        name = getStructureSynonym(info['name'])
         f = open(targetdir + "/dvhinfo_%s.json" % name, "w")
         f.write(str)
         f.close()

@@ -17,9 +17,11 @@ def anonDate(dt):
     anonDate = date(anonDate.year, anonDate.month, 1)
     return datetime.strftime(anonDate, '%Y%m%d')
 
+<<<<<<< HEAD
+
+#workDir = 'c:/workspace/trumpet/data/hnc'
+workDir = '/var/data/hnc'
 processSynonyms('structures_dict.csv')
-workDir = 'c:/workspace/trumpet/data/hnc'
-#workDir = '/var/data/hnc'
 fcsv = open(f'{workDir}/dvhs.csv', 'w', newline='')
 csvwriter = csv.DictWriter(fcsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'nbStructures', 'structures', 'dirDvhs'])
 csvwriter.writeheader()
@@ -36,7 +38,7 @@ try:
     iStudy = 1
     for studyName in studies:
         url = f'http://si-s-serv1041.st.chulg:8042/studies/{studyName}'
-#    studyName='15ab6c5a-f4e1f841-cc083f4e-68909fe4-8db94635'
+#    studyName='0b33e2ff-ae5ebd1b-5a2f9e66-61225e3f-67beb356'
 #    for x in range(1):
         url = f'http://si-s-serv1041.st.chulg:8042/studies/{studyName}'
         resp = requests.get(url, auth=auth)
@@ -118,4 +120,3 @@ else:
 finally:
     fcsv.close()
     fanoncsv.close()
-

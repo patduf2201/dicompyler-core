@@ -1,5 +1,15 @@
+import string
 from dicompylercore import dicomparser, dvh, dvhcalc
 import jsons
+import csv
+
+synonyms= {}
+def processSynonyms(sfile: string):
+    with open(sfile, newline='') as csvfile:
+        csvreader = csv.reader(csvfile, delimiter=',')
+        for row in csvreader:
+            if len(row)>2 and row[2]!='':
+                synonyms[row[0]]=row[2]
 
 def extract(basedir, targetdir):
     rsfile = basedir + "/rtstruct.dcm"
@@ -23,7 +33,11 @@ def extract(basedir, targetdir):
                    "D100": dvhabs.D100, "D98": dvhabs.D98, "D95": dvhabs.D95, "D2cc": dvhabs.D2cc
                   }
         str = jsons.dumps(dvhinfo)
-        f = open(targetdir + "/dvhinfo_%d.json" % info['id'], "w")
+        #TODO: use structure name (or synonym) instead of id.
+        name = info['name']
+        if (name in synonyms.keys()):
+            name = synonyms[name]
+        f = open(targetdir + "/dvhinfo_%s.json" % name, "w")
         f.write(str)
         f.close()
     return infos

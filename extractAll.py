@@ -17,14 +17,14 @@ def anonDate(dt):
     anonDate = date(anonDate.year, anonDate.month, 1)
     return datetime.strftime(anonDate, '%Y%m%d')
 
-#workDir = 'c:/workspace/trumpet/data/hnc'
-workDir = '/var/data/hnc'
+workDir = 'c:/workspace/trumpet/data/hnc'
+#workDir = '/var/data/hnc'
 processSynonyms('structures_dict.csv')
 fcsv = open(f'{workDir}/dvhs.csv', 'w', newline='')
-csvwriter = csv.DictWriter(fcsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'nbStructures', 'structures', 'dirDvhs'])
+csvwriter = csv.DictWriter(fcsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'accessionNumber', 'seriesDesc', 'nbStructures', 'structures', 'dirDvhs'])
 csvwriter.writeheader()
 fanoncsv = open(f'{workDir}anon/dvhs.csv', 'w', newline='')
-anoncsvwriter = csv.DictWriter(fanoncsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'nbStructures', 'structures', 'dirDvhs'])
+anoncsvwriter = csv.DictWriter(fanoncsv, delimiter=',', dialect='excel', fieldnames=['numnat', 'studyDate', 'doseDate', 'studyId', 'studyName', 'accessionNumber', 'seriesDesc', 'nbStructures', 'structures', 'dirDvhs'])
 anoncsvwriter.writeheader()
 auth = HTTPBasicAuth('orthanc', 'orthanc')
 url = "http://si-s-serv1041.st.chulg:8042/studies"
@@ -46,6 +46,7 @@ try:
         patientId = study['PatientMainDicomTags']['PatientID']
         studyDate = study['MainDicomTags']['StudyDate']
         studyID = study['MainDicomTags']['StudyID']
+        accessionNumber = study['MainDicomTags']['AccessionNumber']
         print(f'Processing patient {patientId}, study {studyName}. Study {iStudy} on {nbStudies} studies')
         iStudy = iStudy + 1
         anonStudyDate = anonDate(studyDate)
@@ -80,6 +81,7 @@ try:
                     assert len(instances)==1
                     urlRtDose = f'http://si-s-serv1041.st.chulg:8042/instances/{instances[0]}/file'
                     doseDate = tags['SeriesDate']
+                    seriesDesc = tags['SeriesDescription']
                     anonDoseDate = anonDate(doseDate)
                     patientDir = f'{workDir}/{patientId}/{studyName}/{nbRtDose}'
                     shaPatientId = anonString(patientId)
@@ -100,9 +102,9 @@ try:
                     structures = extract(patientDir, targetDir)
                     structureList = [getStructureSynonym(i["name"]) for i in structures]
                     structureNames = "|".join(structureList)
-                    csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyID, 'studyName': studyName, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
+                    csvwriter.writerow({'numnat': patientId, 'studyDate': studyDate, 'doseDate': doseDate, 'studyId': studyID, 'studyName': studyName, 'accessionNumber': accessionNumber, 'seriesDesc': seriesDesc, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}' })
                     fcsv.flush()
-                    anoncsvwriter.writerow({'numnat': shaPatientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': shaStudyID, 'studyName': shaStudyName,  'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
+                    anoncsvwriter.writerow({'numnat': shaPatientId, 'studyDate': anonStudyDate, 'doseDate': anonDoseDate, 'studyId': shaStudyID, 'studyName': shaStudyName, 'accessionNumber': accessionNumber, 'seriesDesc': seriesDesc, 'nbStructures': len(structures), 'structures': structureNames, 'dirDvhs': f'{shaPatientId}/{shaStudyName}/{nbRtDose}'})
                     fanoncsv.flush()
                     urlRtDose=None
                     nbRtDose = nbRtDose + 1 

@@ -1,4 +1,5 @@
 import string
+import numpy as np
 from dicompylercore import dicomparser, dvh, dvhcalc
 import jsons
 import csv
@@ -33,12 +34,17 @@ def extract(basedir, targetdir):
     for info in infos:
         dvhabs = dvhcalc.get_dvh(rsfile, rdfile, info['id'])
         dvhrelvol = dvhabs.relative_volume
+        # Resize to bins of 2 cGy
+        relcounts = np.copy(dvhrelvol.counts) if (dvhrelvol.counts.size%2==0) else np.hstack((dvhrelvol.counts, dvhrelvol.counts[-1]))
+        relcounts = np.mean(relcounts.reshape(relcounts.size//2, 2), axis=1)
+        relbins = np.copy(dvhrelvol.bins) if (dvhrelvol.bins.size%2==0) else np.hstack((dvhrelvol.bins, dvhrelvol.bins[-1]))
+        relbins =  np.take(relbins.reshape(relbins.size//2, 2), 0, axis=1)
+
         dvhinfo = { "bins": dvhrelvol.bins, "counts": dvhrelvol.counts, "dose_units": dvhrelvol.dose_units, "volume_units": dvhrelvol.volume_units, 
                    "volumeCm3": dvhabs.volume, "maxDose": dvhabs.max, "minDose": dvhabs.min, "meanDose": dvhabs.mean,
                    "D100": dvhabs.D100, "D98": dvhabs.D98, "D95": dvhabs.D95, "D2cc": dvhabs.D2cc
                   }
         str = jsons.dumps(dvhinfo)
-        #TODO: use structure name (or synonym) instead of id.
         name = getStructureSynonym(info['name'])
         f = open(targetdir + "/dvhinfo_%s.json" % name, "w")
         f.write(str)
